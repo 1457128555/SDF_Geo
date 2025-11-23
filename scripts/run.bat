@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 chcp 65001 >nul
 echo ========================================
-echo   SDF 2D Geometry Processor - Run Script
+echo   SDF_Geo项目 - 一键运行
 echo ========================================
 echo.
 
@@ -33,7 +33,7 @@ if defined EXE_PATH (
 :BUILD
 echo.
 echo [步骤 1/2] 编译项目...
-call scripts\build.bat
+call build.bat
 if !errorlevel! neq 0 (
     echo.
     echo [错误] 编译失败，无法运行程序
@@ -63,7 +63,7 @@ echo.
 echo [步骤 2/2] 运行程序...
 echo ========================================
 echo.
-echo 启动 SDF Demo 渲染程序...
+echo 启动 SDF_Demo 渲染程序...
 echo 按 ESC 键退出程序
 echo.
 echo ========================================

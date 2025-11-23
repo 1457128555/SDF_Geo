@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 chcp 65001 >nul
 echo ========================================
-echo   SDF 2D Geometry Processor - Build Script
+echo   SDF_Geo项目 - 编译脚本
 echo ========================================
 echo.
 
