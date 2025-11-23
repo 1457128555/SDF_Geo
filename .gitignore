@@ -74,8 +74,10 @@ x86/
 *.a
 
 # vcpkg
+vcpkg/
 vcpkg_installed/
 packages/
+vcpkg_path.txt
 
 # Dependencies (if manually downloaded)
 dependencies/
@@ -92,6 +94,7 @@ Thumbs.db
 *.autosave
 *.bak
 *.orig
+imgui.ini
 
 # IDE specific
 .idea/
