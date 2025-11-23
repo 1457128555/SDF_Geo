@@ -33,7 +33,7 @@ if defined EXE_PATH (
 :BUILD
 echo.
 echo [步骤 1/2] 编译项目...
-call build.bat
+call "%~dp0build.bat"
 if !errorlevel! neq 0 (
     echo.
     echo [错误] 编译失败，无法运行程序
