@@ -9,7 +9,7 @@
 
 **一个基于Signed Distance Field的2D几何处理库和可视化Demo**
 
-[演示视频](#-演示) • [快速开始](#-快速开始) • [API文档](API_USAGE.md) • [示例代码](example_usage.cpp)
+[演示视频](#-演示) • [快速开始](#-快速开始) • [API文档](docs/API_USAGE.md) • [示例代码](examples/basic/example_usage.cpp)
 
 </div>
 
@@ -89,8 +89,8 @@ SDF 2D Geometry Processor 是一个强大而易用的2D几何处理工具，提�
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/1457128555/SDF_2D.git
-cd SDF_2D
+git clone https://github.com/1457128555/SDF_Geo.git
+cd SDF_Geo
 
 # 2. 安装依赖（首次运行）
 setup.bat
@@ -167,9 +167,9 @@ if (ring.isValid) {
 
 ### 更多示例
 
-- 📚 [完整API文档](API_USAGE.md)
-- 💡 [使用示例代码](example_usage.cpp)
-- 📖 [API快速参考](API_README.md)
+- 📚 [完整API文档](docs/API_USAGE.md)
+- 💡 [使用示例代码](examples/basic/example_usage.cpp)
+- 📖 [API快速参考](docs/API_README.md)
 
 ## 🎮 交互界面
 
@@ -194,25 +194,39 @@ if (ring.isValid) {
 
 ```
 SDF_2D/
-├── docs/                    # 文档和演示资源
-│   ├── demo.mp4            # 演示视频
-│   └── screenshots/        # 截图
-├── src/                    # 核心源代码（可选组织）
-│   ├── main.cpp           # Demo应用主程序
-│   ├── sdf.h              # 底层SDF算法接口
-│   ├── sdf.cpp            # 底层算法实现
-│   ├── SDFProcessor.h     # 高层API接口 ⭐
-│   └── SDFProcessor.cpp   # 高层API实现 ⭐
-├── API_USAGE.md           # 详细API使用文档
-├── API_README.md          # API快速入门
-├── example_usage.cpp      # 可运行的示例代码
-├── CMakeLists.txt         # CMake构建配置
-├── setup.bat              # 自动安装依赖脚本
-├── build.bat              # 自动编译脚本
-├── run.bat                # 一键运行脚本
-├── .gitignore            # Git忽略文件
-├── LICENSE               # MIT许可证
-└── README.md             # 本文件
+├── include/                 # 📦 公共头文件（库接口）
+│   ├── sdf.h               # 底层SDF算法接口
+│   └── SDFProcessor.h      # 高层API接口 ⭐
+│
+├── src/                     # 🔧 库实现
+│   ├── sdf.cpp             # 底层算法实现
+│   └── SDFProcessor.cpp    # 高层API实现 ⭐
+│
+├── examples/                # 💡 示例代码
+│   ├── demo/               # OpenGL可视化Demo
+│   │   └── main.cpp
+│   └── basic/              # 基础使用示例
+│       └── example_usage.cpp
+│
+├── docs/                    # 📚 文档和演示资源
+│   ├── demo.gif            # 演示动图
+│   ├── API_USAGE.md        # 详细API使用文档
+│   ├── API_README.md       # API快速入门
+│   └── screenshots/        # 功能截图
+│
+├── scripts/                 # 🛠️ 构建脚本
+│   ├── setup.bat           # 安装依赖
+│   ├── build.bat           # 编译脚本
+│   └── run.bat             # 运行脚本
+│
+├── CMakeLists.txt          # CMake构建配置
+├── build.bat               # 快捷编译（调用scripts/build.bat）
+├── run.bat                 # 快捷运行（调用scripts/run.bat）
+├── .gitignore              # Git忽略文件
+├── LICENSE                 # MIT许可证
+├── CONTRIBUTING.md         # 贡献指南
+├── CHANGELOG.md            # 版本历史
+└── README.md               # 本文件
 ```
 
 ## 🔧 技术栈
@@ -283,7 +297,7 @@ SDF_2D/
 
 ## 📞 联系方式
 
--  Issues: [GitHub Issues](https://github.com/1457128555/SDF_2D/issues)
+- 💬 Issues: [GitHub Issues](https://github.com/1457128555/SDF_Geo/issues)
 
 ---
 
