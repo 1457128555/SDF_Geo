@@ -51,9 +51,15 @@ SDF 2D Geometry Processor 是一个强大而易用的2D几何处理工具，提�
 
 <div align="center">
 
-### 功能展示
+### 🎥 完整功能演示
 
-[查看完整演示视频](docs/demo.mp4)
+<img src="docs/demo.gif" width="700" alt="SDF 2D Demo"/>
+
+> 实时演示：SDF可视化、等值线提取、环形填充等核心功能
+
+---
+
+### 📸 功能截图
 
 <table>
   <tr>
@@ -62,9 +68,9 @@ SDF 2D Geometry Processor 是一个强大而易用的2D几何处理工具，提�
     <td align="center"><b>环形填充</b></td>
   </tr>
   <tr>
-    <td><img src="docs/screenshots/sdf_visualization.png" width="250" alt="SDF可视化"/></td>
-    <td><img src="docs/screenshots/iso_contour.png" width="250" alt="等值线"/></td>
-    <td><img src="docs/screenshots/ring_fill.png" width="250" alt="环形填充"/></td>
+    <td><img src="docs/screenshots/sdf_visualization.jpg" width="200" alt="SDF可视化"/></td>
+    <td><img src="docs/screenshots/iso_contour.jpg" width="200" alt="等值线"/></td>
+    <td><img src="docs/screenshots/ring_fill.jpg" width="200" alt="环形填充"/></td>
   </tr>
 </table>
 
