@@ -1,0 +1,117 @@
+# Build directories
+build/
+out/
+bin/
+lib/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CMakeScripts/
+*.cmake
+!CMakeLists.txt
+Makefile
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# Visual Studio
+.vs/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+x64/
+x86/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+[Bb]in/
+[Oo]bj/
+*.aps
+*.pch
+*.ipch
+*.ilk
+*.meta
+*.obj
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Compiled binaries
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+*.lib
+*.a
+
+# vcpkg
+vcpkg_installed/
+packages/
+
+# Dependencies (if manually downloaded)
+dependencies/
+external/
+
+# Temporary files
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Generated files
+*.autosave
+*.bak
+*.orig
+
+# IDE specific
+.idea/
+*.iml
+nbproject/
+.gradle/
+
+# OS specific
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Cache
+*.cache
+
+# Keep these important files
+!.gitignore
+!.gitattributes
+
+# Documentation build (if using Doxygen)
+docs/html/
+docs/latex/
