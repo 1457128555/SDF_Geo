@@ -93,13 +93,18 @@ git clone https://github.com/1457128555/SDF_Geo.git
 cd SDF_Geo
 
 # 2. 安装依赖（首次运行）
-setup.bat
+.\scripts\setup.bat
 
-# 3. 编译并运行
-run.bat
+# 3. 编译并运行（自动编译+运行）
+.\run.bat
 ```
 
 **就这么简单！** 🎉
+
+> **💡 提示：** 
+> - `setup.bat` 会自动安装vcpkg和所有依赖库（GLFW, GLAD, ImGui）
+> - `run.bat` 会自动检测是否需要编译，然后运行程序
+> - 程序会生成在 `build/Release/SDF_Demo.exe`
 
 ### 方法2: 手动构建
 
@@ -131,7 +136,7 @@ cmake --build . --config Release
 #### 运行
 
 ```bash
-.\Release\SDF_Geo.exe
+.\Release\SDF_Demo.exe
 ```
 
 ## 💻 使用示例
@@ -220,13 +225,52 @@ SDF_2D/
 │   └── run.bat             # 运行脚本
 │
 ├── CMakeLists.txt          # CMake构建配置
-├── build.bat               # 快捷编译（调用scripts/build.bat）
-├── run.bat                 # 快捷运行（调用scripts/run.bat）
+├── run.bat                 # 一键运行（自动编译+运行）
 ├── .gitignore              # Git忽略文件
 ├── LICENSE                 # MIT许可证
 ├── CONTRIBUTING.md         # 贡献指南
 ├── CHANGELOG.md            # 版本历史
 └── README.md               # 本文件
+```
+
+### 📜 脚本说明
+
+| 脚本 | 功能 | 使用场景 |
+|------|------|---------|
+| **scripts/setup.bat** | 安装vcpkg和依赖库 | 首次克隆或依赖更新时 |
+| **scripts/build.bat** | 编译项目 | 单独编译不运行 |
+| **scripts/run.bat** | 运行程序（检测并编译） | 日常开发运行 |
+| **run.bat** | 快捷入口（调用scripts/run.bat） | 最常用 ⭐ |
+
+### 🔨 库集成
+
+如果你想在自己的项目中使用SDF库：
+
+**需要的文件：**
+```
+include/
+├── sdf.h              # 核心算法接口
+└── SDFProcessor.h     # 高层API接口（推荐）
+
+src/
+├── sdf.cpp            # 核心算法实现
+└── SDFProcessor.cpp   # 高层API实现
+```
+
+**CMakeLists.txt 配置：**
+```cmake
+# 添加SDF库
+add_library(sdf STATIC
+    path/to/sdf.cpp
+    path/to/SDFProcessor.cpp
+)
+
+target_include_directories(sdf PUBLIC
+    path/to/include
+)
+
+# 链接到你的项目
+target_link_libraries(YourProject PRIVATE sdf)
 ```
 
 ## 🔧 技术栈
